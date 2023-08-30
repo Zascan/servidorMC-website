@@ -1,0 +1,33 @@
+.container-encabezado {
+    height: 57px;
+}
+
+.encabezado {
+    height: 57px;
+    background-color: rgb(238, 238, 238);
+    
+    display: flex;
+    flex-direction: row;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+}
+
+
+
+.container-inv {
+    height: 25px;
+}
+.inv {
+    background-color: #1c1c1c;
+    
+    height: 21px;
+    position: fixed;
+    top: 57px;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}

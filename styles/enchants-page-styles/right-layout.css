@@ -1,0 +1,300 @@
+.right-layout {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.enchant-seleccionado-container-fixed {
+    position: fixed;
+
+    width: 361px;
+    height: fit-content;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: none;
+    margin-bottom: 37.5px;
+}
+
+.enchant-seleccionado-container {
+    
+    display: grid;
+    grid-template-rows: auto auto;
+
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+
+    border-radius: 18px;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+
+    color: #0a0a0a;
+}
+
+
+
+
+/* -- DENTRO DEL CONTAINER PRINCIPAL -- */ 
+ /* - Primer subcontainer - */
+
+.enchant-seleccionado-nombreCalidad-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 32px;
+    height: fit-content;
+    width: 361px;
+    padding: 10px 0;
+
+    background-color: rgb(247, 247, 247);
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.enchant-seleccionado-nombre {
+    margin-left: 20px;
+    font-weight: 700;
+    
+    overflow: visible;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+    box-sizing: border-box;
+
+    min-width: 0;
+    max-width: 157.7px;
+
+    cursor: pointer;
+}
+.span-nombre {
+    display: inline-block;
+}
+.animate {
+    position: relative;
+    animation: leftright 1.9s infinite alternate ease-in-out;
+}
+
+.enchant-seleccionado-calidad {
+    margin-right: 20px;
+    font-weight: 700;
+}
+
+/* - Segundo subcontainer - */
+
+.enchant-seleccionado-info {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    row-gap: 10px;
+
+    margin: 20px;
+
+    height: fit-content;
+
+    letter-spacing: 1px;
+}
+
+
+.enchant-seleccionado-lvlmax,
+.enchant-seleccionado-probabilidad,
+.enchant-seleccionado-cooldown {
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.enchant-seleccionado-habilidad-container {
+    background-color: rgb(247, 247, 247); 
+    
+    border-radius: 4px;
+
+    height: fit-content;
+}
+.enchant-seleccionado-habilidad {
+    font-size: 18px;
+
+    padding: 5px;
+}
+
+.enchant-seleccionado-seAplica-container {
+    display: flex;
+    justify-content: left;
+
+    height: fit-content;
+
+    margin-top: 15px;
+}
+.enchant-seleccionado-seAplica-image {
+    width: 35px;
+
+    margin-right: 10px;
+
+    filter: drop-shadow(0 0 5px rgba(0,0,0, 0.2));
+}
+
+/* - SVGS Y TOOLTIP- */
+.tooltip-container {
+    position: relative;
+}
+.svg-info {
+    width: 22px;
+
+    position: absolute;
+
+    bottom: 15px;
+    right: 19px;
+
+    opacity: 0.35;
+
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.info-tooltip {
+    position: absolute;
+
+    bottom: -115px;
+    right: 0;
+
+    background-color: rgb(247, 247, 247);
+    font-size: 12px;
+    padding: 5px;
+
+    width: 200px;
+
+    opacity: 0;
+    transition: all 0.5s;
+
+    pointer-events: none;
+}
+.tooltip-container:hover .info-tooltip {
+    opacity: 1;
+}
+.svg-info:hover {
+    opacity: 0.65;
+}
+
+
+/* --------- COLORES PARA CADA CALIDAD --------- */
+
+.enchant-seleccionado-container:has(.enchant-seleccionado-info-Simple) {
+    background-color: gray;
+    background: linear-gradient(145deg, rgba(128,128,128,1) 0%, rgba(157,157,157,1) 100%);
+}
+.enchant-seleccionado-calidad-Simple {
+    color: gray;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.35);
+}
+
+.enchant-seleccionado-container:has(.enchant-seleccionado-info-Unique) {
+    background-color: rgb(2, 212, 92);
+    background: linear-gradient(145deg, rgba(2,212,92,1) 0%, rgba(99,198,141,1) 100%);
+}
+.enchant-seleccionado-calidad-Unique {
+    color: rgb(2, 212, 92);
+    text-shadow: 0 0 10px rgba(2, 212, 92, 0.35);
+}
+
+.enchant-seleccionado-container:has(.enchant-seleccionado-info-Elite) {
+    background-color: rgb(20, 128, 179);
+    background: linear-gradient(145deg, rgba(20,128,179,1) 0%, rgba(77,135,163,1) 100%);
+}
+.enchant-seleccionado-calidad-Elite {
+    color: rgb(20, 128, 179);
+    text-shadow: 0 0 10px rgba(20, 128, 179, 0.35);
+
+    letter-spacing: 1px;
+}
+
+.enchant-seleccionado-container:has(.enchant-seleccionado-info-Ultimate) {
+    background-color: rgb(241, 241, 0);
+    background: linear-gradient(145deg, rgba(241,241,0,1) 0%, rgba(250,250,108,1) 100%);
+}
+.enchant-seleccionado-calidad-Ultimate {
+    color: rgb(219, 219, 11);
+    text-shadow: 0 0 10px rgba(219, 219, 11, 0.35);
+}
+
+.enchant-seleccionado-container:has(.enchant-seleccionado-info-Legendary) {
+    background-color: rgb(255, 153, 0);
+    background: linear-gradient(145deg, rgba(255,153,0,1) 0%, rgba(238,180,109,1) 100%);
+}
+.enchant-seleccionado-calidad-Legendary {
+    color: rgb(255, 153, 0);
+    text-shadow: 0 0 10px rgba(255, 153, 0, 0.35);
+    margin-left: 5px;
+}
+
+.enchant-seleccionado-container:has(.enchant-seleccionado-info-Fabled) {
+    background-color: #9458d1;
+    background: linear-gradient(145deg, rgba(148,88,209,1) 0%, rgba(207,132,226,1) 100%);
+}
+.enchant-seleccionado-calidad-Fabled {
+    color: #9458d1;
+    text-shadow: 0 0 10px rgba(217, 2, 206, 0.35);
+}
+
+
+/* --------- ANIMACIÓN DE ENTRADA --------- */
+
+@keyframes animacionEntrada {
+    0% {
+        opacity: 0;
+        transform: scale(0.75, 0.75);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+}
+
+
+.animation-container {
+    animation-name:animacionEntrada;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(.50, .75, .88, 1);
+}
+
+
+
+/* - ANIMACIÓN CUANDO EL TEXTO EXCEDE EL LÍMITE - */
+
+@keyframes leftright {
+    0%,
+    20% {
+      transform: translateX(0%);
+      left: 0%;
+    }
+    80%,
+    100% {
+      transform: translateX(-100%);
+      left: 100%;
+    }
+  }
+  
+  .fader {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+  
+    &.fader-left {
+      left: 0;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0),
+        rgba(247, 247, 247, 1)
+      );
+    }
+  
+    &.fader-right {
+      right: 0;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(247, 247, 247, 1)
+      );
+    }
+  }

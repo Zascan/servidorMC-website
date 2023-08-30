@@ -1,0 +1,228 @@
+.filtro-container-fixed {
+
+    margin-top: 21px;
+
+    position: fixed;
+
+    width: 226px;
+    margin-left: 12px;
+
+    margin-bottom: 20px;
+}
+
+.filtro-container {
+    display: grid;
+    row-gap: 20px;
+
+    align-items: center;
+
+    width: 100%;
+}
+
+.search-bar {
+    width:210px;
+    height: 43px;
+
+    border: none;
+    border-radius: 2px;
+
+    padding: 2px 8px;
+    outline: none;
+
+    font-size: 22px;
+
+    color: rgb(28, 28, 28);
+    background-color: rgb(238, 238, 238);
+    
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+
+    text-align: center;
+
+    transition: all 0.4s;
+}
+.search-bar:focus {
+    background-color: rgb(28, 28, 28);
+    color: rgb(238, 238, 238);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+.search-bar::placeholder {
+    color: rgb(28, 28, 28);
+    text-align: center;
+    opacity: 0.35;
+
+    transition: all 0.4s;
+}
+.search-bar:focus::placeholder{
+    opacity: 0;
+}
+
+
+.filtros-icons-grid {
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+
+    width: 216px;
+    height: fit-content;
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+
+    border-radius: 2px;
+}
+
+
+.filtro-icon-container {
+    display: flex;
+    align-items: center;
+
+    height: fit-content;
+    width: fit-content;
+}
+.filtro-icon-image {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+.filtro-label {
+    width: 50px;
+    height: 50px;
+
+    margin-right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filtro-icon-container-calidad {
+    height: 38px;
+}
+
+
+/* - FILTRO POR CALIDAD - */
+.filtro-calidad {
+    font-size: 25px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* - Colores -*/
+.filtro-calidad-S {
+    color: #9458d1;
+}
+.filtro-calidad-A {
+    color: #ff9900;
+}
+.filtro-calidad-B {
+    color: #c5c509;
+}
+.filtro-calidad-C {
+    color: #1480b3;
+}
+.filtro-calidad-D {
+    color: #02d45c;
+}
+.filtro-calidad-F {
+    color: gray;
+}
+
+
+/* - PROPIEDADES DEL CHECKBOX CUSTOMIZADO - */
+
+input[class="filtro-checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 26px;
+    height: 26px;
+
+    margin: 0;
+
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 3px;
+    cursor: pointer;
+
+    border: 1px solid rgb(28, 28, 28);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[class="filtro-checkbox"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 20px;
+
+    color: rgb(238, 238, 238);
+
+    content: "\f00c";
+    display: none;
+}
+input[class="filtro-checkbox"]:hover {
+    opacity: 0.6;
+}
+input[class="filtro-checkbox"]:checked {
+    background-color: rgb(28, 28, 28);  
+}
+input[class="filtro-checkbox"]:checked:after {
+    display: block;
+}
+input[class="filtro-checkbox"]:checked:hover {
+    opacity: 0.9;  
+}
+
+
+/* - PROPIEDADES DEL SELECT CUSTOMIZADO - */
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background: rgb(238, 238, 238);
+    background-image: none;
+    flex: 1;
+    padding: 0.5em;
+    color:#1c1c1c;
+    cursor:pointer;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+
+    padding-left: 12.5px;
+    border-radius: 2px;
+ }
+ select::-ms-expand {
+    display: none;
+ }
+ .select {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 3em;
+    line-height: 3;
+    background: none;
+    overflow: hidden;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+ }
+ .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #2b2e2e;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+
+    color: rgb(28, 28, 28);
+ }
+ .select:hover::after {
+    color: rgb(238, 238, 238)
+ }

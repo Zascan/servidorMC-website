@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Encantamientos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;
+    0,700;1,300;1,400;1,500;1,600&family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;
+    500;700&display=swap" 
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Link necesario para la animación al scrollear -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styles/enchants-page-styles/layout.css">
+    <link rel="stylesheet" href="styles/enchants-page-styles/header.css">
+    <link rel="stylesheet" href="styles/enchants-page-styles/main-layout.css">
+    <link rel="stylesheet" href="styles/enchants-page-styles/right-layout.css">
+    <link rel="stylesheet" href="styles/enchants-page-styles/left-layout.css">
+  </head>
+
+
+  <body>
+    
+    <!-- AQUÍ ESTÁ EL ENCABEZADO, DONDE IRÁ  EL LOGO Y LOS DEMÁS ENLACES A LAS DEMÁS PÁGINAS DEL PROYECTO-->
+    
+    <div class="container-encabezado">
+      <header class="encabezado">
+        <div class="container-izquierdo">
+  
+        </div>
+  
+        <div class="container-centro">
+  
+        </div>
+  
+        <div class="container-derecho">
+  
+        </div>
+      </header>
+    </div>
+   
+    <div class="container-inv">
+      <header class="inv"></header>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------- --->
+    
+    <div class="layout">
+      <div class="left-layout">
+        <div class="filtro-container-fixed">
+          <div class="filtro-container">
+            <input class="search-bar js-search-bar" type="text" placeholder="Buscar por nombre" spellcheck="false">
+            <div class="filtros-icons-grid js-filtros-icons-grid">
+            </div>
+            <div class="filtros-icons-grid js-filtros-icons-grid_2">
+            </div>
+            <!-- En un futuro aquí habrá un orden de búsqueda a elegir -->
+            <div class="select js-select-visualizado">
+              <select>
+                <option selected disabled>Visualizado</option>
+                <option value="normal">Estándar</option>
+                <option value="nivel">Máximo nivel</option>
+                <option value="aplicar">Aplicabilidad</option>
+              </select>
+            </div>
+          </div>   
+        </div>  
+      </div>
+      
+      <div class="main-layout">
+        <div class="enchants-grid-container js-enchants-grid-container">
+        </div>
+      </div>
+      
+      <div class="right-layout">
+        <div class="enchant-seleccionado-container-fixed js-enchant-seleccionado-container">
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!-- Script de la animación al scrollear -->
+
+    <script type="module" src="scripts/enchants-page.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,192 @@
+.enchants-grid-container {
+    display: grid;
+    position: relative;
+
+    height: fit-content;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 20px;
+    row-gap: 20px;
+        
+    padding: 21px 42px;
+}
+
+.enchant-grid-container {
+    display: flex;
+    align-items: center;
+
+  
+    border: none;
+    
+    width: 450px;
+    height: 60px;
+
+    background-color: rgb(238, 238, 238);
+
+    border-radius: 3px;
+
+    transition: all 0.2s;
+}
+.enchant-grid-container:hover {
+    cursor: pointer;
+}
+
+
+.enchant-imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+.enchant-imagen  {
+    width: 40px;
+    height: 40px;
+
+    margin-left: -10px;
+}
+.enchant-imagen-container:has(p) {
+    color: rgb(32, 32, 32);
+    font-size: 25px;
+    font-weight: 600;
+}
+.enchant-imagen-armor {
+    width: 27.62px;
+    height: 59.52px;
+    margin-bottom: 5px;
+}
+.enchant-imagen-container {
+    position: relative;
+}
+.numAplicar {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+
+    bottom: 5px;
+    right: 28.5px;
+
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.enchant-info-container {
+    display: grid;
+    grid-template-columns: 67% 33%;
+
+    width: 100%;
+    height: 100%;
+}
+
+.enchant-nombre {
+    font-size: 25px;
+    font-weight: 600;
+
+    max-width: 240px;
+    line-height: 27px;
+}
+
+.enchant-calidad {
+    font-weight: 600;
+    font-size: 20px;
+
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+
+    color: rgb(250, 250, 250);
+}
+
+
+.enchant-nombre-container {
+    height: 60px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+.enchant-calidad-container {
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+
+/* ------- ESTO SON LOS COLORES RESPECTO A SU CALIDAD,  Y EFECTOS AL APUNTAR CON EL RATÓN -------- */
+
+.Simple{
+    color: gray;
+}
+.Simple .enchant-calidad-container{
+    background-color: gray;
+}
+.enchant-grid-container:hover:has(.Simple) {
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.6);
+}
+
+.Unique {
+    color: #02d45c;
+}
+.Unique .enchant-calidad-container{
+    background-color: #02d45c;
+}
+.enchant-grid-container:hover:has(.Unique) {
+    box-shadow: 0 0 20px rgba(39, 245, 128, 0.6);
+}
+
+.Elite {
+    color: #1480b3;
+}
+.Elite .enchant-calidad-container{
+
+    background-color: #1480b3;
+}
+.enchant-grid-container:hover:has(.Elite) {
+    box-shadow: 0 0 20px rgba(3, 175, 255, 0.6);
+}
+
+.Ultimate {
+    color: #dbdb0b;
+}
+.Ultimate .enchant-calidad-container{
+    background-color: #dbdb0b;
+}
+.enchant-grid-container:hover:has(.Ultimate) {
+    box-shadow: 0 0 20px rgba(247, 247, 18, 0.6);
+}
+
+.Legendary {
+    color: #e37910;
+}
+.Legendary .enchant-calidad-container{
+    background-color: #ff9900;
+}
+.enchant-grid-container:hover:has(.Legendary) {
+    box-shadow: 0 0 20px rgba(227, 121, 16, 0.6);
+}
+
+.Fabled {
+    color: #9458d1;
+}
+.Fabled .enchant-calidad-container{
+    background-color: #9458d1;
+}
+.enchant-grid-container:hover:has(.Fabled) {
+    box-shadow: 0 0 20px rgba(217, 2, 206, 0.6);
+}
+
+/* -Mensaje cuando no hay encantamientos- */
+.noEncontrado {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.25);
+
+    position: absolute;
+    justify-self: center;
+    top: 10px;
+}

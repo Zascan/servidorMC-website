@@ -11,8 +11,9 @@ p {
 
 .layout {
     display: grid;
-
     grid-template-columns: 250px 1012px 401px;
+
+    justify-content: center;
 }
 
 .left-layout,

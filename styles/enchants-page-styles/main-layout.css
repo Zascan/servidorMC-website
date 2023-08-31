@@ -73,7 +73,7 @@
 
 .enchant-info-container {
     display: grid;
-    grid-template-columns: 67% 33%;
+    grid-template-columns: auto 118.79px;
 
     width: 100%;
     height: 100%;

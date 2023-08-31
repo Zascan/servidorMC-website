@@ -229,7 +229,7 @@ export const enchants = [
     probabilidad: "20/30/40/50/60",
     cooldown: "7/8/8/8/9",
     seAplica: [
-        "ballesta"
+        "arco"
     ],
     calidad: "Unique"
 },
